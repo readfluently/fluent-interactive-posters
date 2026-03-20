@@ -2,10 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const hotspots = document.querySelectorAll(".hotspot");
   const infoPanel = document.getElementById("infoPanel");
 
-  if (!hotspots.length || !infoPanel) return;
-
   hotspots.forEach((hotspot) => {
     hotspot.addEventListener("click", () => {
+
+      // remove active from all
+      hotspots.forEach(h => h.classList.remove("active"));
+
+      // add active to clicked
+      hotspot.classList.add("active");
+
       const title = hotspot.dataset.title;
       const text = hotspot.dataset.text;
       const tag = hotspot.dataset.tag;
