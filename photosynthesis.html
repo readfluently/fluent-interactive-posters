@@ -3,81 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grade 6 NST - Photosynthesis</title>
-  <link rel="stylesheet" href="../../../css/styles.css" />
+  <title>Fluent | Photosynthesis</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="topbar">
-    <a href="../../../index.html" class="back-btn">← Back</a>
-    <h1>Grade 6 NST: Photosynthesis</h1>
-    <button id="playAudioBtn">🔊 Listen</button>
-  </header>
+  <nav class="topbar" aria-label="Main navigation">
+    <div class="topbar-inner">
+      <span class="brand">Fluent</span>
+      <a class="top-link" href="index.html">Interactive Posters</a>
+      <a class="top-link" href="grade-6.html">Grade 6</a>
+      <a class="top-link" href="grade-6-natural-sciences.html">NST</a>
+    </div>
+  </nav>
 
-  <main class="poster-page">
-    <section class="poster-hero">
-      <h2>How Plants Make Their Food</h2>
-      <p>Click the glowing parts to learn how photosynthesis works.</p>
+  <main class="page">
+    <header class="hero">
+      <h1>Photosynthesis</h1>
+      <p>Click the blue points on the poster to learn how plants make food.</p>
+    </header>
 
-      <div class="scene">
-        <div class="sun hotspot" data-topic="sunlight">☀️</div>
-        <div class="cloud hotspot" data-topic="carbon-dioxide">☁️</div>
-        <div class="plant hotspot" data-topic="leaf">🌱</div>
-        <div class="roots hotspot" data-topic="water">🪴</div>
-        <div class="oxygen hotspot" data-topic="oxygen">O₂</div>
-        <div class="glucose hotspot" data-topic="glucose">🍬</div>
+    <section class="poster-wrap">
+      <div class="poster-card-shell">
+        <h2 class="poster-title">Interactive Poster</h2>
 
-        <div class="arrow arrow-sun"></div>
-        <div class="arrow arrow-air"></div>
-        <div class="arrow arrow-water"></div>
-        <div class="arrow arrow-oxygen"></div>
+        <div class="poster-stage">
+          <div class="sun">☀️</div>
+          <div class="cloud one">☁️</div>
+          <div class="cloud two">☁️</div>
+
+          <div class="label-pill light-label">Sunlight</div>
+          <div class="label-pill co2-label">Carbon dioxide enters</div>
+          <div class="label-pill oxygen-label">Oxygen leaves</div>
+          <div class="label-pill water-label">Water enters through roots</div>
+          <div class="label-pill glucose-label">Food is made in the leaves</div>
+
+          <div class="arrow-flow arrow-light">↘</div>
+          <div class="arrow-flow arrow-co2">→</div>
+          <div class="arrow-flow arrow-oxygen">→</div>
+          <div class="arrow-flow arrow-water">↗</div>
+          <div class="arrow-flow arrow-glucose">→</div>
+
+          <div class="plant">
+            <div class="stem"></div>
+            <div class="leaf left-top"></div>
+            <div class="leaf right-top"></div>
+            <div class="leaf left-mid"></div>
+            <div class="leaf right-mid"></div>
+            <div class="roots">╲│╱<br>╱│╲</div>
+          </div>
+
+          <div class="soil"></div>
+
+          <button class="hotspot" style="top: 12%; left: 84%;" data-title="Sunlight" data-text="Plants need energy from the Sun. Sunlight is one of the main things needed for photosynthesis." data-tag="Energy source" aria-label="Learn about sunlight">+</button>
+
+          <button class="hotspot" style="top: 35%; left: 23%;" data-title="Carbon Dioxide" data-text="Carbon dioxide is a gas in the air. Plants take it in through tiny openings in their leaves." data-tag="Gas from the air" aria-label="Learn about carbon dioxide">+</button>
+
+          <button class="hotspot" style="top: 73%; left: 26%;" data-title="Water" data-text="Water is taken in through the roots and moves up the stem to the leaves." data-tag="Taken in by roots" aria-label="Learn about water">+</button>
+
+          <button class="hotspot" style="top: 43%; left: 51%;" data-title="Leaves" data-text="Most photosynthesis happens in the leaves. The leaves contain chlorophyll, which helps trap sunlight." data-tag="Main place of photosynthesis" aria-label="Learn about leaves">+</button>
+
+          <button class="hotspot" style="top: 31%; left: 79%;" data-title="Oxygen" data-text="Plants release oxygen into the air during photosynthesis. Animals and people need oxygen to breathe." data-tag="Released into the air" aria-label="Learn about oxygen">+</button>
+
+          <button class="hotspot" style="top: 54%; left: 75%;" data-title="Glucose" data-text="Glucose is the food made by the plant during photosynthesis. The plant uses it for energy and growth." data-tag="Plant food" aria-label="Learn about glucose">+</button>
+        </div>
       </div>
-    </section>
 
-    <aside class="info-panel" id="infoPanel">
-      <h3 id="infoTitle">Click a part</h3>
-      <p id="infoText">
-        Select a glowing part of the poster to learn more.
-      </p>
-    </aside>
+      <div class="sidebar">
+        <aside class="info-panel" id="infoPanel">
+          <h2>Choose a part</h2>
+          <p>Click a blue point on the poster to see an explanation here.</p>
+          <span class="tag">Interactive learning</span>
+        </aside>
 
-    <section class="steps-section">
-      <h2>Photosynthesis in 4 Steps</h2>
-      <div class="steps-grid">
-        <div class="step-card">
-          <h3>1. Sunlight</h3>
-          <p>The plant gets energy from the Sun.</p>
-        </div>
-        <div class="step-card">
-          <h3>2. Water</h3>
-          <p>The roots absorb water from the soil.</p>
-        </div>
-        <div class="step-card">
-          <h3>3. Carbon dioxide</h3>
-          <p>The leaves take in carbon dioxide from the air.</p>
-        </div>
-        <div class="step-card">
-          <h3>4. Food is made</h3>
-          <p>The plant makes glucose and releases oxygen.</p>
-        </div>
+        <section class="summary-card">
+          <h3>Quick Summary</h3>
+          <p>Photosynthesis is the process plants use to make their own food.</p>
+          <p>Plants use <strong>sunlight</strong>, <strong>water</strong>, and <strong>carbon dioxide</strong>.</p>
+          <p>They make <strong>glucose</strong> for food and release <strong>oxygen</strong> into the air.</p>
+        </section>
       </div>
-    </section>
-
-    <section class="recap-section">
-      <h2>Quick Recap</h2>
-      <button class="recap-btn" data-answer="Plants need sunlight, water, and carbon dioxide.">
-        What does a plant need?
-      </button>
-      <button class="recap-btn" data-answer="Plants make glucose, which is their food.">
-        What food does the plant make?
-      </button>
-      <button class="recap-btn" data-answer="Plants release oxygen into the air.">
-        What gas is released?
-      </button>
-
-      <div id="recapAnswer" class="recap-answer"></div>
     </section>
   </main>
 
-  <script src="../../../js/photosynthesis.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
