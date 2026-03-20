@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grade 6 NST - Photosynthesis</title>
+  <link rel="stylesheet" href="../../../css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="../../../index.html" class="back-btn">← Back</a>
+    <h1>Grade 6 NST: Photosynthesis</h1>
+    <button id="playAudioBtn">🔊 Listen</button>
+  </header>
 
+  <main class="poster-page">
+    <section class="poster-hero">
+      <h2>How Plants Make Their Food</h2>
+      <p>Click the glowing parts to learn how photosynthesis works.</p>
+
+      <div class="scene">
+        <div class="sun hotspot" data-topic="sunlight">☀️</div>
+        <div class="cloud hotspot" data-topic="carbon-dioxide">☁️</div>
+        <div class="plant hotspot" data-topic="leaf">🌱</div>
+        <div class="roots hotspot" data-topic="water">🪴</div>
+        <div class="oxygen hotspot" data-topic="oxygen">O₂</div>
+        <div class="glucose hotspot" data-topic="glucose">🍬</div>
+
+        <div class="arrow arrow-sun"></div>
+        <div class="arrow arrow-air"></div>
+        <div class="arrow arrow-water"></div>
+        <div class="arrow arrow-oxygen"></div>
+      </div>
+    </section>
+
+    <aside class="info-panel" id="infoPanel">
+      <h3 id="infoTitle">Click a part</h3>
+      <p id="infoText">
+        Select a glowing part of the poster to learn more.
+      </p>
+    </aside>
+
+    <section class="steps-section">
+      <h2>Photosynthesis in 4 Steps</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <h3>1. Sunlight</h3>
+          <p>The plant gets energy from the Sun.</p>
+        </div>
+        <div class="step-card">
+          <h3>2. Water</h3>
+          <p>The roots absorb water from the soil.</p>
+        </div>
+        <div class="step-card">
+          <h3>3. Carbon dioxide</h3>
+          <p>The leaves take in carbon dioxide from the air.</p>
+        </div>
+        <div class="step-card">
+          <h3>4. Food is made</h3>
+          <p>The plant makes glucose and releases oxygen.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="recap-section">
+      <h2>Quick Recap</h2>
+      <button class="recap-btn" data-answer="Plants need sunlight, water, and carbon dioxide.">
+        What does a plant need?
+      </button>
+      <button class="recap-btn" data-answer="Plants make glucose, which is their food.">
+        What food does the plant make?
+      </button>
+      <button class="recap-btn" data-answer="Plants release oxygen into the air.">
+        What gas is released?
+      </button>
+
+      <div id="recapAnswer" class="recap-answer"></div>
+    </section>
+  </main>
+
+  <script src="../../../js/photosynthesis.js"></script>
+</body>
+</html>
