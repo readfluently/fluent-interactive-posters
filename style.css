@@ -256,20 +256,50 @@ body {
   top: 28px;
   right: 34px;
   font-size: 3.2rem;
+  animation: glow 3s infinite ease-in-out;
 }
 
 .cloud {
   position: absolute;
   font-size: 2rem;
   opacity: 0.92;
+  animation: float 6s infinite ease-in-out;
 }
 
-.cloud.one { top: 42px; left: 40px; }
-.cloud.two { top: 110px; left: 140px; }
+.cloud.one {
+  top: 42px;
+  left: 40px;
+}
+
+.cloud.two {
+  top: 110px;
+  left: 140px;
+}
+
+@keyframes glow {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
 .label-pill {
   position: absolute;
-  background: rgba(255,255,255,0.92);
+  background: rgba(255, 255, 255, 0.92);
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 8px 12px;
@@ -277,11 +307,30 @@ body {
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
 }
 
-.co2-label { top: 220px; left: 48px; }
-.water-label { bottom: 115px; left: 70px; }
-.oxygen-label { top: 180px; right: 34px; }
-.glucose-label { top: 340px; right: 44px; }
-.light-label { top: 92px; right: 145px; }
+.co2-label {
+  top: 220px;
+  left: 30px;
+}
+
+.water-label {
+  bottom: 115px;
+  left: 70px;
+}
+
+.oxygen-label {
+  top: 180px;
+  right: 34px;
+}
+
+.glucose-label {
+  top: 340px;
+  right: 44px;
+}
+
+.light-label {
+  top: 92px;
+  right: 145px;
+}
 
 .arrow-flow {
   position: absolute;
@@ -290,11 +339,32 @@ body {
   font-weight: bold;
 }
 
-.arrow-light { top: 120px; right: 215px; transform: rotate(40deg); }
-.arrow-co2 { top: 250px; left: 190px; }
-.arrow-water { bottom: 140px; left: 145px; transform: rotate(-45deg); }
-.arrow-oxygen { top: 205px; right: 175px; }
-.arrow-glucose { top: 365px; right: 190px; }
+.arrow-light {
+  top: 120px;
+  right: 215px;
+  transform: rotate(40deg);
+}
+
+.arrow-co2 {
+  top: 250px;
+  left: 190px;
+}
+
+.arrow-water {
+  bottom: 140px;
+  left: 145px;
+  transform: rotate(-45deg);
+}
+
+.arrow-oxygen {
+  top: 205px;
+  right: 175px;
+}
+
+.arrow-glucose {
+  top: 365px;
+  right: 190px;
+}
 
 .plant {
   position: absolute;
@@ -320,7 +390,7 @@ body {
   position: absolute;
   background: linear-gradient(135deg, #52c35a 0%, #2f9c44 100%);
   border-radius: 100% 0 100% 0;
-  border: 2px solid rgba(255,255,255,0.28);
+  border: 2px solid rgba(255, 255, 255, 0.28);
 }
 
 .leaf.left-top {
@@ -375,7 +445,7 @@ body {
   bottom: 0;
   height: 88px;
   background: linear-gradient(180deg, #8c5c3b 0%, #724628 100%);
-  border-top: 2px solid rgba(255,255,255,0.3);
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .hotspot {
@@ -391,7 +461,7 @@ body {
   cursor: pointer;
   transform: translate(-50%, -50%);
   box-shadow: 0 8px 18px rgba(37, 99, 235, 0.28);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   animation: pulse 1.8s infinite;
 }
 
@@ -402,10 +472,22 @@ body {
   outline: none;
 }
 
+.hotspot.active {
+  background: #1d4ed8;
+  transform: translate(-50%, -50%) scale(1.15);
+  box-shadow: 0 0 0 10px rgba(37, 99, 235, 0.15);
+}
+
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.35); }
-  70% { box-shadow: 0 0 0 12px rgba(37, 99, 235, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.35);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(37, 99, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
 }
 
 .sidebar {
